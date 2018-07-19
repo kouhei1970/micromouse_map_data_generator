@@ -51,7 +51,7 @@ char smap[33][66]={
 };
 
 void main(void){
-
+    short i,j;
     make_mapdata();
     for (i=0;i<16;i++){
         for (j=0;j<16;j++){
