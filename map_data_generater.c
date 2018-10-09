@@ -72,11 +72,11 @@ void make_mapdata(void)
 
     for (i=0;i<16;i++){//南北方向
         for (j=0;j<16; j++) {//東西方向
-            n_wall = 0x08*(smap[30-2*i][2+4*j]=='-');
-            e_wall = 0x04*(smap[31-2*i][4+4*j]=='|');
-            s_wall = 0x02*(smap[32-2*i][2+4*j]=='-');
-            w_wall = 0x01*(smap[31-2*i][4*j]=='|');
-            mapdata[i][j] = n_wall | e_wall | w_wall | s_wall;
+            n_wall = 0x01*(smap[30-2*i][2+4*j]=='-');
+            e_wall = 0x02*(smap[31-2*i][4+4*j]=='|');
+            s_wall = 0x04*(smap[32-2*i][2+4*j]=='-');
+            w_wall = 0x08*(smap[31-2*i][4*j]=='|');
+            mapdata[i][j] = s_wall | w_wall | e_wall | n_wall;
         }
     }
 }
